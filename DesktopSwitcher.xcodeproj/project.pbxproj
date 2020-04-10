@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84428D85243F10F600785FA5 /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428D83243F10F600785FA5 /* PreferenceWindowController.swift */; };
+		84428D86243F10F600785FA5 /* PreferenceWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84428D84243F10F600785FA5 /* PreferenceWindowController.xib */; };
+		84428D8B243F222400785FA5 /* TimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428D8A243F222400785FA5 /* TimeExtension.swift */; };
 		8472C083243DADD100E7F40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472C082243DADD100E7F40F /* AppDelegate.swift */; };
 		8472C085243DADD200E7F40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8472C084243DADD200E7F40F /* Assets.xcassets */; };
 		8472C088243DADD200E7F40F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8472C086243DADD200E7F40F /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84428D83243F10F600785FA5 /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
+		84428D84243F10F600785FA5 /* PreferenceWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceWindowController.xib; sourceTree = "<group>"; };
+		84428D8A243F222400785FA5 /* TimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeExtension.swift; sourceTree = "<group>"; };
 		8472C07F243DADD100E7F40F /* DesktopSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8472C082243DADD100E7F40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8472C084243DADD200E7F40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,8 +60,11 @@
 				8472C082243DADD100E7F40F /* AppDelegate.swift */,
 				8472C084243DADD200E7F40F /* Assets.xcassets */,
 				8472C086243DADD200E7F40F /* MainMenu.xib */,
+				84428D83243F10F600785FA5 /* PreferenceWindowController.swift */,
+				84428D84243F10F600785FA5 /* PreferenceWindowController.xib */,
 				8472C089243DADD200E7F40F /* Info.plist */,
 				8472C08A243DADD200E7F40F /* DesktopSwitcher.entitlements */,
+				84428D8A243F222400785FA5 /* TimeExtension.swift */,
 			);
 			path = DesktopSwitcher;
 			sourceTree = "<group>";
@@ -92,6 +101,7 @@
 				TargetAttributes = {
 					8472C07E243DADD100E7F40F = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -120,6 +130,7 @@
 			files = (
 				8472C085243DADD200E7F40F /* Assets.xcassets in Resources */,
 				8472C088243DADD200E7F40F /* MainMenu.xib in Resources */,
+				84428D86243F10F600785FA5 /* PreferenceWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84428D85243F10F600785FA5 /* PreferenceWindowController.swift in Sources */,
 				8472C083243DADD100E7F40F /* AppDelegate.swift in Sources */,
+				84428D8B243F222400785FA5 /* TimeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DesktopSwitcher/DesktopSwitcher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -278,6 +292,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gyrojeff.JeffersonQin.DesktopSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -286,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = DesktopSwitcher/DesktopSwitcher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -297,6 +315,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gyrojeff.JeffersonQin.DesktopSwitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
