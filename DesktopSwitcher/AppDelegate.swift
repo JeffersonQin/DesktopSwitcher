@@ -40,6 +40,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         statusItem.menu = statusMenu
         statusItem.button?.image = NSImage.init(named: "icon")
 
+        NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.rightMouseDown) { (event) in
+            if self.middleMouseDown { NSWorkspace.shared.launchApplication("DUp") }
+        }
+        
         NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.leftMouseDown) { (event) in
             let thisTime = Date().milliStamp
             if thisTime - self.lastTime < 250 {
